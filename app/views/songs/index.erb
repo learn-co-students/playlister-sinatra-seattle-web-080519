@@ -1,0 +1,5 @@
+<h1>View all Songs </h1>
+<% binding.pry%>
+<% @songs.each do |song| %>
+    <a href="<%= song.slug %>"><%=@song.name %></a>
+<% end %>
