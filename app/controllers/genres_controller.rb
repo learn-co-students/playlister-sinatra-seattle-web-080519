@@ -1,8 +1,4 @@
-require 'rack-flash'
-require 'sinatra/base'
 class GenresController < ApplicationController
-  enable :sessions
-  use Rack::Flash
 
   get '/genres' do
     @genres = Genre.all

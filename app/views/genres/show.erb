@@ -1,7 +1,5 @@
 <h1>Show a Genre</h1>
-<% if flash.has?(:message) %>
-  <%= flash[:message] %>
-<% end %>
+
 <h3>Genre: </h3><%= @genre.name %>
 <h3>Genre artists: </h3>
 <% @genre.artists.each do |artist| %>
