@@ -1,6 +1,10 @@
+require 'rack-flash'
+require 'sinatra/base'
 class ArtistsController < ApplicationController
+  enable :sessions
+  use Rack::Flash
 
-  get '/artists/' do
+  get '/artists' do
     @artists = Artist.all
     erb :'artists/index'
   end
