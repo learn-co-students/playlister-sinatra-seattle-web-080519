@@ -1,9 +1,9 @@
 <h1>View a Song</h1>
+<hr>
+<a href="/"><p>Main Page</p></a>
 <% if flash.has?(:message) %>
   <%= flash[:message] %>
 <% end %>
-<hr>
-<a href="/"><p>Main Page</p></a>
 <hr>
 <h3>Song artist: </h3><a href="/artists/<%= @song.artist.slug %>"><%= @song.artist.name %></a>
 <h3>Song name: </h3><%= @song.name %>
@@ -11,6 +11,6 @@
 <% @song.genres.each do |genre| %>
     <p><a href="/genres/<%= genre.slug %>"><%= genre.name %></a></p>
 <% end %>
-
+<hr>
 <a href="/songs/<%=@song.slug%>/edit">Edit Song</a>
 
